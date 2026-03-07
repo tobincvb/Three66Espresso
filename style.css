@@ -1,0 +1,313 @@
+/* --- Variables & Aesthetic Setup --- */
+:root {
+    --crema: #F9F6F0;
+    --espresso: #2B1810;
+    --bay-blue: #4A7C89;
+    --sage-green: #6B8E6B;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--crema);
+    color: var(--espresso);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: var(--espresso);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--bay-blue);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--bay-blue);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--espresso);
+    color: var(--white);
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--espresso);
+    border: 2px solid var(--espresso);
+    padding: 10px 22px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--espresso);
+    color: var(--crema);
+}
+
+/* --- Navigation --- */
+.navbar {
+    background-color: var(--crema);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: var(--espresso);
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--bay-blue);
+}
+
+/* --- Hero Section --- */
+.hero {
+    position: relative;
+    height: 80vh;
+    background-color: var(--sage-green); /* Fallback color */
+    /* Add a real background image here when deploying */
+    background-image: url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(43, 24, 16, 0.4); /* Dark overlay for text readability */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.hero-buttons .btn-secondary {
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.hero-buttons .btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--espresso);
+}
+
+/* --- About Section --- */
+.about {
+    padding: 100px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: var(--bay-blue);
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: var(--sage-green);
+    color: var(--crema);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}
+
+/* --- Menu Preview --- */
+.menu-preview {
+    background-color: var(--white);
+    padding: 100px 0;
+}
+
+.menu-preview h2 {
+    font-size: 2.5rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.menu-card {
+    background-color: var(--crema);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border-top: 5px solid var(--sage-green);
+}
+
+.menu-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--espresso);
+    border-bottom: 1px solid rgba(43, 24, 16, 0.1);
+    padding-bottom: 10px;
+}
+
+.menu-card ul {
+    list-style: none;
+}
+
+.menu-card li {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--espresso);
+    color: var(--crema);
+    padding: 80px 0 20px 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.footer p {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.footer .btn-secondary {
+    border-color: var(--crema);
+    color: var(--crema);
+    margin-top: 15px;
+}
+
+.footer .btn-secondary:hover {
+    background-color: var(--crema);
+    color: var(--espresso);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(249, 246, 240, 0.1);
+    padding-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .nav-links, .nav-btn {
+        display: none; /* Consider adding a hamburger menu for full production */
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
