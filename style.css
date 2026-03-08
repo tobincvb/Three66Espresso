@@ -2,11 +2,11 @@
 :root {
     --bg-white: #FFFFFF;
     --bg-offwhite: #F9FAFB;
-    --text-dark: #1E293B; /* Deep slate, softer than black */
+    --text-dark: #1E293B; 
     --text-muted: #64748B;
-    --ocean-blue: #1E3A8A; /* Sophisticated deep blue */
-    --warm-sand: #D4B895; /* Elegant coastal sand */
-    --sand-hover: #C2A378;
+    --ocean-blue: #1E3A8A; /* High contrast navy for buttons & headings */
+    --ocean-blue-hover: #152c6b;
+    --warm-sand: #D4B895; /* Kept exclusively for decorative accents, NOT buttons */
 }
 
 * {
@@ -47,7 +47,7 @@ a {
     background-color: var(--bg-offwhite);
 }
 
-/* --- Warm Sand Accents --- */
+/* --- Warm Sand Accents (Decorative Only) --- */
 .sand-line {
     width: 60px;
     height: 3px;
@@ -60,55 +60,50 @@ a {
     margin: 20px auto 40px auto;
 }
 
-/* --- Chic Buttons --- */
-.btn-sand {
-    border: 1px solid var(--warm-sand);
-    color: var(--ocean-blue);
-    padding: 10px 24px;
-    font-weight: 500;
-    border-radius: 30px; /* Pill shape for elegance */
-    background: transparent;
-}
-
-.btn-sand:hover {
-    background-color: var(--warm-sand);
-    color: #fff;
-}
-
-.btn-sand-solid {
-    background-color: var(--warm-sand);
-    color: #fff;
+/* --- High-Contrast Buttons --- */
+.btn-primary {
+    background-color: var(--ocean-blue);
+    color: #ffffff !important;
     padding: 14px 32px;
+    font-weight: 600;
+    border-radius: 30px; /* Pill shape for elegance */
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+    border: 2px solid var(--ocean-blue);
+}
+
+.btn-primary:hover {
+    background-color: var(--ocean-blue-hover);
+    border-color: var(--ocean-blue-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+}
+
+/* Used in the Nav Bar to make it slightly smaller */
+.nav-btn {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+}
+
+.btn-white-outline {
+    border: 2px solid #ffffff;
+    color: #ffffff !important;
+    padding: 12px 30px;
     font-weight: 600;
     border-radius: 30px;
     display: inline-block;
-    box-shadow: 0 4px 15px rgba(212, 184, 149, 0.4);
+    background: transparent;
 }
 
-.btn-sand-solid:hover {
-    background-color: var(--sand-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(212, 184, 149, 0.6);
-}
-
-.btn-outline {
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 14px 32px;
-    font-weight: 500;
-    border-radius: 30px;
-    display: inline-block;
-}
-
-.btn-outline:hover {
-    background-color: #fff;
-    color: var(--ocean-blue);
+.btn-white-outline:hover {
+    background-color: #ffffff;
+    color: var(--ocean-blue) !important;
 }
 
 /* --- Light & Airy Navigation --- */
 .navbar {
     background-color: rgba(255, 255, 255, 0.95);
-    padding: 20px 0;
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -136,12 +131,12 @@ a {
 
 .nav-links li a {
     color: var(--text-dark);
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 500;
 }
 
 .nav-links li a:hover {
-    color: var(--warm-sand);
+    color: var(--ocean-blue);
 }
 
 /* --- Bright Coastal Hero Section --- */
@@ -149,14 +144,21 @@ a {
     position: relative;
     height: 85vh;
     background-color: #e2e8f0;
-    /* Live image of coastal water/coffee vibe */
-    background-image: linear-gradient(rgba(30, 58, 138, 0.4), rgba(30, 58, 138, 0.7)), url('https://images.unsplash.com/photo-1555507036-ab1f40ce88cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); 
+    /* Replace this URL with your Instagram Hero Image */
+    background-image: url('ig-hero-background.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+/* Dark overlay to ensure white text and blue buttons are perfectly readable */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .hero-content {
@@ -187,13 +189,21 @@ a {
     font-size: 1.2rem;
     color: #f1f5f9;
     margin-bottom: 40px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .hero-buttons {
     display: flex;
     gap: 15px;
     justify-content: center;
+}
+
+/* --- Image Fallbacks (Until you upload your IG photos) --- */
+.image-fallback {
+    background-color: #e2e8f0;
+    display: block;
+    color: transparent; /* Hides broken image icon text */
+    min-height: 250px;
 }
 
 /* --- Sections & Layout --- */
@@ -220,6 +230,7 @@ a {
 
 .rounded-img {
     width: 100%;
+    height: auto;
     border-radius: 16px;
     object-fit: cover;
 }
@@ -334,16 +345,6 @@ a {
 .footer p {
     color: #cbd5e1;
     font-size: 0.95rem;
-}
-
-.footer .btn-sand {
-    color: #fff;
-    border-color: #fff;
-}
-
-.footer .btn-sand:hover {
-    background-color: #fff;
-    color: var(--ocean-blue);
 }
 
 /* --- Mobile Sticky CTA --- */
