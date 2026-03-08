@@ -66,7 +66,9 @@ a {
     padding: 14px 32px;
     font-weight: 600;
     border-radius: 30px; 
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
     border: 2px solid var(--ocean-blue);
 }
@@ -98,6 +100,24 @@ a {
     color: var(--ocean-blue) !important;
 }
 
+.btn-ig-hero {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    border: 2px solid #ffffff;
+    color: #ffffff !important;
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 30px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-ig-hero:hover {
+    background-color: #ffffff;
+    color: var(--ocean-blue) !important;
+}
+
 /* --- Navigation & Logo --- */
 .navbar {
     background-color: rgba(255, 255, 255, 0.95);
@@ -115,7 +135,6 @@ a {
     align-items: center;
 }
 
-/* Limits logo size so it doesn't break the navbar */
 .nav-logo {
     max-height: 50px;
     width: auto;
@@ -138,13 +157,30 @@ a {
     color: var(--ocean-blue);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-ig-link {
+    color: var(--ocean-blue);
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-ig-link:hover {
+    color: var(--warm-sand);
+    transform: scale(1.1); 
+}
+
 /* --- Hero Section --- */
 .hero {
     position: relative;
     height: 85vh;
     background-color: #e2e8f0;
-    /* Updated to the new sunrise image filename */
-    background-image: url('view-sunrise.JPG'); 
+    background-image: url('view-sunrise.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -194,6 +230,7 @@ a {
     display: flex;
     gap: 15px;
     justify-content: center;
+    flex-wrap: wrap; 
 }
 
 /* --- Image Fallbacks --- */
@@ -389,7 +426,8 @@ a {
 
 /* --- Responsive --- */
 @media (max-width: 900px) {
-    .nav-links, .nav-btn {
+    /* Hide nav links AND actions (IG icon) on mobile to save space */
+    .nav-links, .nav-actions {
         display: none;
     }
     .hero-content h1 {
@@ -409,8 +447,5 @@ a {
     }
     body {
         padding-bottom: 80px;
-    }
-    .hero-buttons {
-        flex-direction: column;
     }
 }
