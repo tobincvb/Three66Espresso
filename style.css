@@ -1,11 +1,12 @@
-/* --- Luxury Variables --- */
+/* --- Elevated Coastal Variables --- */
 :root {
-    --midnight: #12100E;
-    --charcoal: #1A1816;
-    --gold: #D4AF37;
-    --gold-hover: #F3E5AB;
-    --alabaster: #FAF9F6;
-    --gray: #888888;
+    --bg-white: #FFFFFF;
+    --bg-offwhite: #F9FAFB;
+    --text-dark: #1E293B; /* Deep slate, softer than black */
+    --text-muted: #64748B;
+    --ocean-blue: #1E3A8A; /* Sophisticated deep blue */
+    --warm-sand: #D4B895; /* Elegant coastal sand */
+    --sand-hover: #C2A378;
 }
 
 * {
@@ -15,16 +16,16 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--midnight);
-    color: var(--alabaster);
-    line-height: 1.8;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    line-height: 1.7;
 }
 
+/* Headings use Playfair Display for that luxury boutique feel */
 h1, h2, h3, .logo {
-    font-family: 'Cinzel', serif;
-    font-weight: 600;
-    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
+    color: var(--ocean-blue);
 }
 
 a {
@@ -42,81 +43,77 @@ a {
     text-align: center;
 }
 
-/* --- Golden Accents --- */
-.gold-line {
-    width: 60px;
-    height: 2px;
-    background-color: var(--gold);
-    margin: 20px 0 30px 0;
+.bg-light {
+    background-color: var(--bg-offwhite);
 }
 
-.gold-line.center {
+/* --- Warm Sand Accents --- */
+.sand-line {
+    width: 60px;
+    height: 3px;
+    background-color: var(--warm-sand);
+    margin: 20px 0 30px 0;
+    border-radius: 2px;
+}
+
+.sand-line.center {
     margin: 20px auto 40px auto;
 }
 
-.gold-link {
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.9rem;
-}
-
-.gold-link:hover {
-    color: var(--alabaster);
-}
-
-/* --- High-Converting Buttons --- */
-.btn-gold {
-    border: 1px solid var(--gold);
-    color: var(--gold);
+/* --- Chic Buttons --- */
+.btn-sand {
+    border: 1px solid var(--warm-sand);
+    color: var(--ocean-blue);
     padding: 10px 24px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 30px; /* Pill shape for elegance */
+    background: transparent;
 }
 
-.btn-gold:hover {
-    background-color: var(--gold);
-    color: var(--midnight);
+.btn-sand:hover {
+    background-color: var(--warm-sand);
+    color: #fff;
 }
 
-.btn-gold-solid {
-    background-color: var(--gold);
-    color: var(--midnight);
-    padding: 16px 36px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-    display: inline-block;
-}
-
-.btn-gold-solid:hover {
-    background-color: var(--gold-hover);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-}
-
-.btn-gold-outline {
-    border: 1px solid var(--gold);
-    color: var(--gold);
+.btn-sand-solid {
+    background-color: var(--warm-sand);
+    color: #fff;
     padding: 14px 32px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-weight: 600;
+    border-radius: 30px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(212, 184, 149, 0.4);
+}
+
+.btn-sand-solid:hover {
+    background-color: var(--sand-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 184, 149, 0.6);
+}
+
+.btn-outline {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 14px 32px;
+    font-weight: 500;
+    border-radius: 30px;
     display: inline-block;
 }
 
-.btn-gold-outline:hover {
-    background-color: var(--gold);
-    color: var(--midnight);
+.btn-outline:hover {
+    background-color: #fff;
+    color: var(--ocean-blue);
 }
 
-/* --- Navigation --- */
+/* --- Light & Airy Navigation --- */
 .navbar {
-    background-color: rgba(18, 16, 14, 0.95);
-    padding: 25px 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
 .nav-container {
@@ -126,8 +123,9 @@ a {
 }
 
 .logo {
-    color: var(--alabaster);
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .nav-links {
@@ -137,34 +135,28 @@ a {
 }
 
 .nav-links li a {
-    color: var(--alabaster);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    font-weight: 500;
 }
 
 .nav-links li a:hover {
-    color: var(--gold);
+    color: var(--warm-sand);
 }
 
-/* --- Hero Section --- */
+/* --- Bright Coastal Hero Section --- */
 .hero {
     position: relative;
-    height: 90vh;
-    background-color: var(--charcoal);
-    background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); /* Moody espresso shot */
+    height: 85vh;
+    background-color: #e2e8f0;
+    /* Live image of coastal water/coffee vibe */
+    background-image: linear-gradient(rgba(30, 58, 138, 0.4), rgba(30, 58, 138, 0.7)), url('https://images.unsplash.com/photo-1555507036-ab1f40ce88cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80'); 
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: linear-gradient(to bottom, rgba(18,16,14,0.3) 0%, rgba(18,16,14,0.9) 100%);
 }
 
 .hero-content {
@@ -175,148 +167,156 @@ a {
 }
 
 .subheading {
-    color: var(--gold);
+    color: var(--warm-sand);
     font-size: 1rem;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
 }
 
 .hero-content h1 {
     font-size: 4.5rem;
-    margin-bottom: 30px;
-    color: var(--alabaster);
+    margin-bottom: 25px;
+    color: #ffffff;
     line-height: 1.1;
 }
 
 .hero-content p {
     font-size: 1.2rem;
-    color: #CCCCCC;
+    color: #f1f5f9;
     margin-bottom: 40px;
     font-weight: 300;
 }
 
-/* --- Luxury Sections --- */
-.luxury-section {
-    padding: 120px 0;
-    background-color: var(--midnight);
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* --- Sections & Layout --- */
+.coastal-section {
+    padding: 100px 0;
 }
 
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 60px;
     align-items: center;
 }
 
 .text-block h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
 }
 
 .text-block p {
-    color: var(--gray);
+    color: var(--text-muted);
     margin-bottom: 20px;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 }
 
-.placeholder-img {
+.rounded-img {
     width: 100%;
-    height: 600px;
-    background-color: var(--charcoal);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gray);
-    font-family: 'Cinzel', serif;
+    border-radius: 16px;
+    object-fit: cover;
 }
 
-/* --- Menu Section --- */
+.shadow {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* --- Menu Cards --- */
 .menu-section {
-    padding: 120px 0;
-    background-color: var(--charcoal);
+    padding: 100px 0;
 }
 
 .menu-section h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
 }
 
 .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    margin-top: 60px;
-}
-
-.menu-item {
-    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-    padding-bottom: 30px;
-}
-
-.menu-item h3 {
-    color: var(--gold);
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.menu-item p {
-    color: var(--gray);
-    font-weight: 300;
-}
-
-/* --- Reviews Section --- */
-.reviews-section {
-    padding: 120px 0;
-    background-color: var(--midnight);
-}
-
-.reviews-section h2 {
-    font-size: 3rem;
-}
-
-.review-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 40px;
     margin-top: 50px;
 }
 
-.review-card {
-    background-color: var(--charcoal);
-    padding: 40px;
-    border-radius: 8px;
-    border-top: 2px solid var(--gold);
-    text-align: left;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+.menu-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
 }
 
-.review-card:hover {
+.menu-card:hover {
     transform: translateY(-5px);
+}
+
+.menu-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.menu-content {
+    padding: 30px;
+}
+
+.menu-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.menu-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* --- Real Reviews Section --- */
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.review-card {
+    background-color: var(--bg-offwhite);
+    padding: 40px;
+    border-radius: 16px;
+    text-align: left;
+    border: 1px solid #e2e8f0;
+}
+
+.stars {
+    color: var(--warm-sand);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
 }
 
 .review-text {
     font-size: 1rem;
-    font-family: 'Montserrat', sans-serif;
     font-style: italic;
-    color: var(--gray);
+    color: var(--text-dark);
     margin-bottom: 20px;
     line-height: 1.8;
 }
 
 .review-author {
-    color: var(--gold);
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 0.85rem;
+    color: var(--ocean-blue);
     font-weight: 600;
+    font-size: 0.95rem;
 }
 
-/* --- Footer --- */
+/* --- Deep Blue Footer --- */
 .footer {
-    border-top: 1px solid rgba(212, 175, 55, 0.2);
     padding: 80px 0;
-    background-color: var(--charcoal);
+    background-color: var(--ocean-blue);
+    color: #fff;
 }
 
 .footer-content {
@@ -326,14 +326,24 @@ a {
 }
 
 .footer .brand h2 {
+    color: #fff;
     font-size: 2rem;
-    color: var(--gold);
     margin-bottom: 10px;
 }
 
 .footer p {
-    color: var(--gray);
-    font-size: 0.9rem;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.footer .btn-sand {
+    color: #fff;
+    border-color: #fff;
+}
+
+.footer .btn-sand:hover {
+    background-color: #fff;
+    color: var(--ocean-blue);
 }
 
 /* --- Mobile Sticky CTA --- */
@@ -343,10 +353,10 @@ a {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(18, 16, 14, 0.95);
+    background-color: #fff;
     padding: 15px;
     z-index: 1000;
-    border-top: 1px solid var(--gold);
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
 }
 
 .full-width {
@@ -367,9 +377,6 @@ a {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    .menu-grid {
-        grid-template-columns: 1fr;
-    }
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -379,6 +386,9 @@ a {
         display: block;
     }
     body {
-        padding-bottom: 80px; /* Space for the sticky CTA */
+        padding-bottom: 80px;
+    }
+    .hero-buttons {
+        flex-direction: column;
     }
 }
