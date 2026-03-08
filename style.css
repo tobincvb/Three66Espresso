@@ -144,7 +144,7 @@ a {
     height: 85vh;
     background-color: #e2e8f0;
     /* Updated to the new sunrise image filename */
-    background-image: url('view-sunrise.jpg'); 
+    background-image: url('view-sunrise.JPG'); 
     background-size: cover;
     background-position: center;
     display: flex;
