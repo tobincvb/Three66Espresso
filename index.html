@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elevated coastal coffee and fresh food at Three66 Espresso Bar. Enjoy unrivaled waterfront views of Mosquito Bay in Lilli Pilli, NSW. Open daily from 5 AM.">
+    
     <title>Three66 Espresso Bar | Lilli Pilli</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,10 +17,16 @@
                 <img src="logo.jpg" alt="Three66 Espresso Bar" class="nav-logo">
             </a>
             
-            <ul class="nav-links">
-                <li><a href="#about">The Vibe</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#reviews">Reviews</a></li>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-item">The Vibe</a></li>
+                <li><a href="#menu" class="nav-item">Menu</a></li>
+                <li><a href="#reviews" class="nav-item">Reviews</a></li>
             </ul>
 
             <div class="nav-actions">
@@ -155,17 +163,23 @@
                 <div class="footer-location">
                     <h2 class="footer-brand">THREE66</h2>
                     <p>Shop 1 / 366 George Bass Dr<br>Lilli Pilli, NSW 2536</p>
+                    
+                    <p style="margin-top: 10px;"><strong>Phone:</strong> <a href="tel:0244713947" style="color: #cbd5e1; text-decoration: underline;">(02) 4471 3947</a></p>
+
                     <div class="hours" style="margin-top: 20px;">
                         <p><strong>Wed - Sun:</strong> 5:00 AM - 2:00 PM</p>
                     </div>
-                    <div class="socials" style="margin-top: 25px;">
+                    
+                    <div class="socials" style="margin-top: 25px; display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="https://maps.google.com/?q=Shop+1/366+George+Bass+Dr,+Lilli+Pilli+NSW+2536" target="_blank" class="btn-white-outline">Get Directions</a>
+                        
                         <a href="https://www.instagram.com/three66espresso" target="_blank" class="btn-white-outline" style="display: inline-flex; align-items: center; gap: 8px;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
-                            Follow Instagram
+                            Instagram
                         </a>
                     </div>
                 </div>
@@ -184,5 +198,23 @@
         <a href="https://three66.mobi-order.com/" target="_blank" class="btn-primary full-width">Order Online Now</a>
     </div>
 
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        const navItems = document.querySelectorAll('.nav-item');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
