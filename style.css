@@ -1,11 +1,11 @@
 /* --- Coastal Seafoam Variables --- */
 :root {
     --bg-white: #FFFFFF;
-    --bg-offwhite: #F8FAFC; /* A slightly cooler off-white to match the seafoam */
-    --text-dark: #1E293B; /* Deep slate for maximum readability */
+    --bg-offwhite: #F8FAFC; 
+    --text-dark: #1E293B; 
     --text-muted: #64748B;
-    --brand-color: #bed8d5; /* Your new Coastal Seafoam */
-    --brand-hover: #a3c5c1; /* Slightly darker seafoam for hover effects */
+    --brand-color: #bed8d5; 
+    --brand-hover: #a3c5c1; 
 }
 
 * {
@@ -28,7 +28,7 @@ body {
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
-    color: var(--text-dark); /* Dark headings for contrast against light backgrounds */
+    color: var(--text-dark); 
 }
 
 a {
@@ -50,7 +50,6 @@ a {
     background-color: var(--bg-offwhite);
 }
 
-/* --- Seafoam Accents --- */
 .sand-line {
     width: 60px;
     height: 3px;
@@ -63,17 +62,17 @@ a {
     margin: 20px auto 40px auto;
 }
 
-/* --- High-Contrast Buttons --- */
+/* --- High-Contrast & Consistent Buttons --- */
 .btn-primary {
     background-color: var(--brand-color);
-    color: var(--text-dark) !important; /* Deep slate text on seafoam button */
+    color: var(--text-dark) !important; 
     padding: 14px 32px;
     font-weight: 600;
     border-radius: 30px; 
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 15px rgba(190, 216, 213, 0.5); /* Seafoam shadow */
+    box-shadow: 0 4px 15px rgba(190, 216, 213, 0.5); 
     border: 2px solid var(--brand-color);
 }
 
@@ -99,9 +98,12 @@ a {
     background: transparent;
 }
 
+/* Added lift animation for consistency */
 .btn-white-outline:hover {
     background-color: #ffffff;
     color: var(--text-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .btn-ig-hero {
@@ -117,9 +119,12 @@ a {
     transition: all 0.3s ease;
 }
 
+/* Added lift animation for consistency */
 .btn-ig-hero:hover {
     background-color: #ffffff;
     color: var(--text-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 /* --- Navigation & Logo --- */
@@ -133,15 +138,20 @@ a {
     box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
+/* Adjusted to bring logo & hamburger off the extreme edges */
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%; 
 }
 
+/* Made logo significantly larger */
 .nav-logo {
-    max-height: 50px;
+    max-height: 80px;
     width: auto;
     display: block;
 }
@@ -214,7 +224,7 @@ a {
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(30, 41, 59, 0.45); /* Deep slate overlay to complement the seafoam */
+    background: rgba(30, 41, 59, 0.45); 
 }
 
 .hero-content {
@@ -255,7 +265,6 @@ a {
     flex-wrap: wrap; 
 }
 
-/* --- Image Fallbacks --- */
 .image-fallback {
     background-color: var(--bg-offwhite);
     color: transparent; 
@@ -365,7 +374,7 @@ a {
     padding: 40px;
     border-radius: 16px;
     text-align: left;
-    border: 1px solid rgba(190, 216, 213, 0.4); /* Subtle seafoam border */
+    border: 1px solid rgba(190, 216, 213, 0.4); 
 }
 
 .stars {
@@ -392,7 +401,7 @@ a {
 .footer {
     padding: 80px 0 30px 0;
     background-color: var(--brand-color);
-    color: var(--text-dark); /* Dark text on seafoam background */
+    color: var(--text-dark); 
 }
 
 .footer-content {
@@ -418,7 +427,7 @@ a {
     opacity: 0.8;
 }
 
-/* Adjust the white outline buttons for the new light footer */
+/* Adjust the white outline buttons for the footer and add hover lift */
 .footer .btn-white-outline {
     border-color: var(--text-dark);
     color: var(--text-dark) !important;
@@ -427,6 +436,8 @@ a {
 .footer .btn-white-outline:hover {
     background-color: var(--text-dark);
     color: var(--brand-color) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .footer-image-container {
@@ -448,7 +459,6 @@ a {
     padding-top: 20px;
 }
 
-/* --- Mobile Sticky CTA --- */
 .mobile-sticky-cta {
     display: none;
     position: fixed;
@@ -469,6 +479,10 @@ a {
 
 /* --- Responsive & Mobile Menu --- */
 @media (max-width: 900px) {
+    .nav-container {
+        padding: 0 20px; /* Reduces extreme padding on mobile */
+    }
+
     .nav-actions {
         display: none;
     }
