@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three66 Espresso Bar | Lilli Pilli</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --highroad-green: #2d4739;
+            --highroad-cream: #f9f7f2;
+            --highroad-gold: #c5a47e;
+            --text-dark: #1a1a1a;
+            --text-light: #555;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: white;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-left: 30px;
+            font-weight: 600;
+        }
+
+        .logo { font-size: 24px; font-family: 'Playfair Display'; letter-spacing: 2px; }
+
+        /* --- Hero Split Section --- */
+        .hero-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 80vh;
+            background-color: var(--highroad-cream);
+        }
+
+        .hero-text {
+            padding: 10% 15%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-text h1 { font-size: 3.5rem; color: var(--highroad-green); margin-bottom: 20px; line-height: 1.1; }
+        .hero-text p { font-size: 1.1rem; margin-bottom: 30px; color: var(--text-light); }
+
+        .hero-image {
+            background: url('view.JPG') center/cover no-repeat;
+            min-height: 400px;
+        }
+
+        /* --- Info Grid (Hours/Location) --- */
+        .info-bar {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .info-item {
+            padding: 60px 40px;
+            border-right: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .info-item:last-child { border-right: none; }
+        .info-item h3 { text-transform: uppercase; font-size: 14px; letter-spacing: 2px; margin-bottom: 15px; color: var(--highroad-gold); }
+
+        /* --- Content Sections --- */
+        .section-padding { padding: 100px 10%; }
+
+        .ona-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 15px 35px;
+            border: 1px solid var(--highroad-green);
+            color: var(--highroad-green);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--highroad-green);
+            color: white;
+        }
+
+        /* --- Menu Grid --- */
+        .menu-preview {
+            background-color: var(--highroad-green);
+            color: white;
+            text-align: center;
+        }
+
+        .menu-preview h2 { font-size: 2.5rem; margin-bottom: 50px; }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .menu-card {
+            background: rgba(255,255,255,0.05);
+            padding: 40px 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .menu-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        /* --- Reviews --- */
+        .reviews { text-align: center; background: #fff; }
+        .review-quote { font-family: 'Playfair Display'; font-style: italic; font-size: 1.8rem; max-width: 800px; margin: 0 auto 20px; }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--highroad-cream);
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .footer-logo { font-family: 'Playfair Display'; font-size: 40px; color: var(--highroad-green); margin-bottom: 20px; }
+
+        @media (max-width: 768px) {
+            .hero-split, .info-bar, .ona-section, .menu-grid { grid-template-columns: 1fr; }
+            .hero-text { padding: 60px 20px; }
+            .info-item { border-right: none; border-bottom: 1px solid #ddd; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">THREE66</div>
+        <div class="nav-links">
+            <a href="#about">The Vibe</a>
+            <a href="#menu">Menus</a>
+            <a href="https://three66.mobi-order.com/">Order Online</a>
+        </div>
+    </nav>
+
+    <header class="hero-split">
+        <div class="hero-text">
+            <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 12px; margin-bottom: 10px;">Lilli Pilli, NSW</p>
+            <h1>Elevated <br>Coastal Coffee.</h1>
+            <p>Exceptional espresso and fresh food, served with unrivaled waterfront views of Mosquito Bay.</p>
+            <div>
+                <a href="https://three66.mobi-order.com/" class="btn-outline">Book a Table</a>
+            </div>
+        </div>
+        <div class="hero-image"></div>
+    </header>
+
+    <section class="info-bar">
+        <div class="info-item">
+            <h3>Opening Hours</h3>
+            <p>WED – SUN<br>5:00 AM – 2:00 PM</p>
+        </div>
+        <div class="info-item">
+            <h3>Location</h3>
+            <p>Shop 1 / 366 George Bass Dr<br>Lilli Pilli, NSW 2536</p>
+            <a href="#" style="color: var(--highroad-gold); font-size: 12px; text-decoration: none; margin-top: 10px; display: block;">GET DIRECTIONS →</a>
+        </div>
+        <div class="info-item">
+            <h3>Contact Us</h3>
+            <p>(02) 4471 3947</p>
+            <p>@three66espresso</p>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding ona-section">
+        <div>
+            <img src="coffee.jpg" alt="Coffee" style="width: 100%; height: 500px; object-fit: cover;">
+        </div>
+        <div>
+            <h3 style="color: var(--highroad-gold); text-transform: uppercase; font-size: 14px; letter-spacing: 2px; margin-bottom: 20px;">Ona Coffee</h3>
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">A Hidden Gem on the Bay</h2>
+            <p>At Three66, we blend premium café culture with the relaxed beauty of the coast. We proudly serve specialty <strong>ONA Coffee</strong>, ensuring every cup is poured to absolute perfection by World Barista Champion standards.</p>
+            <a href="https://three66.mobi-order.com/" class="btn-outline">Explore our story</a>
+        </div>
+    </section>
+
+    <section id="menu" class="section-padding menu-preview">
+        <h2>Taste the Coast</h2>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <h3>The Best Beef Burger</h3>
+                <p>A local favorite. Premium beef, fresh ingredients, and flavors that pack a punch.</p>
+            </div>
+            <div class="menu-card">
+                <h3>Classic Eggs Benny</h3>
+                <p>Served with fresh salmon and roasted cherry tomatoes. The ultimate weekend brunch.</p>
+            </div>
+            <div class="menu-card">
+                <h3>Sweet Corn Fritters</h3>
+                <p>Crispy on the outside, fluffy inside served with choice of bacon, salmon or halloumi.</p>
+            </div>
+        </div>
+        <br><br>
+        <a href="https://three66.mobi-order.com/" class="btn-outline" style="border-color: white; color: white;">View Full Menus</a>
+    </section>
+
+    <section class="section-padding reviews">
+        <div class="review-quote">
+            "Hands down THE BEST BEEF BURGER I've ever had - and I've had thousands in my 60+ years. The staff were also fantastic."
+        </div>
+        <p style="text-transform: uppercase; letter-spacing: 2px; font-weight: 600; font-size: 12px;">— Brett S.</p>
+    </section>
+
+    <footer>
+        <div class="footer-logo">THREE66</div>
+        <p>© 2026 Three66 Espresso Bar. Website inspired by Highroad.</p>
+        <div style="margin-top: 20px;">
+            <a href="#" style="margin: 0 10px; color: var(--text-dark); text-decoration: none;">Instagram</a>
+            <a href="#" style="margin: 0 10px; color: var(--text-dark); text-decoration: none;">Facebook</a>
+        </div>
+    </footer>
+
+</body>
+</html>
